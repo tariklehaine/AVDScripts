@@ -51,7 +51,7 @@ if ($Confirm -notmatch "^[jJ]") {
 # Variabelen
 $SubscriptionId = "2391ada8-feb5-4198-8876-abc31d30a5d5"
 $ResourceGroup = "Desktops"
-$AppNames = @("DIVERSE-IA", "EXACT-PROD-IA", "BEAUFORT-IA", "IBS-IA")
+$AppNames = @("DIVERSE", "EXACT-PROD", "BEAUFORT", "IBS")
 
 # Login en subscription selecteren
 Write-Host "`nInloggen bij Azure..." -ForegroundColor Cyan
