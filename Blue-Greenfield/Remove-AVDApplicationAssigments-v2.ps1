@@ -47,7 +47,7 @@ foreach ($App in $AppNames) {
                 try {
                     # Verwijder de assignment van de source app group
                     Remove-AzRoleAssignment -ObjectId $Assignment.ObjectId -RoleDefinitionName "Desktop Virtualization User" -Scope $SourceAppGroupObj.Id -Confirm:$false
-                    Write-Host "Assignment verwijderd: $($Assignment.DisplayName) ($($Assignment.ObjectId)) van $SourceAppGroup" -ForegroundColor Red
+                    Write-Host "Assignment verwijderd: $($Assignment.DisplayName) ($($Assignment.ObjectId)) van $SourceAppGroup" -ForegroundColor Green
                 }
                 catch {
                     Write-Host "Fout bij verwijderen assignment $($Assignment.ObjectId) van $SourceAppGroup : $($_.Exception.Message)" -ForegroundColor Red
