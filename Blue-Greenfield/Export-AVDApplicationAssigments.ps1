@@ -3,18 +3,30 @@
 
 # Parameters
 param(
-    [Parameter(Mandatory=$true)]
-    [string]$SubscriptionId,
-    
-    [Parameter(Mandatory=$true)]
-    [string]$ResourceGroupName,
+    [Parameter(Mandatory=$false)]
+    [string]$HostPoolName,
     
     [Parameter(Mandatory=$false)]
-    [string]$HostPoolName = "HP03",
-    
-    [Parameter(Mandatory=$false)]
-    [string]$OutputPath = "C:\Temp\AVD_ApplicationAssignments_$(Get-Date -Format 'yyyyMMdd_HHmmss').csv"
+    [string]$OutputPath
 )
+
+# Hardcoded values
+$SubscriptionId = "2391ada8-feb5-4198-8876-abc31d30a5d5"
+$ResourceGroupName = "DESKTOPS"
+
+# Ask for HostPoolName if not provided
+if (-not $HostPoolName) {
+    $HostPoolName = Read-Host "Van welke Hostpool moeten de assigments opgehaald worden?"
+    if (-not $HostPoolName) {
+        Write-Error "HostPoolName is required"
+        exit 1
+    }
+}
+
+# Set default output path with HostPoolName included
+if (-not $OutputPath) {
+    $OutputPath = "C:\Temp\AVD_ApplicationAssignments_$($HostPoolName)_$(Get-Date -Format 'yyyyMMdd_HHmmss').csv"
+}
 
 # Vereiste modules controleren en installeren indien nodig
 $RequiredModules = @("Az.Accounts", "Az.DesktopVirtualization")
