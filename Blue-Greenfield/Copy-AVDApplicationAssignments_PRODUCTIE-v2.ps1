@@ -38,8 +38,8 @@ if ([string]::IsNullOrWhiteSpace($TargetHostPool)) {
 
 # Bevestiging van configuratie
 Write-Host "`n=== Configuratie Overzicht ===" -ForegroundColor Yellow
-Write-Host "Van welke Host Pool moeten de assigments gekopieerd worden: $SourceHostPool" -ForegroundColor Green
-Write-Host "Doel Host Pool (Acceptatie): $TargetHostPool" -ForegroundColor Green
+Write-Host "Host Pool waar assigments van gekopieerd worden: $SourceHostPool" -ForegroundColor Green
+Write-Host "Host Pool waar assigments naar gekopieerd worden: $TargetHostPool" -ForegroundColor Green
 Write-Host "Applicaties: DIVERSE, EXACT-PROD, BEAUFORT, IBS`n" -ForegroundColor Green
 
 $Confirm = Read-Host "Wilt u doorgaan met het kopiëren van assignments? (j/n)"
