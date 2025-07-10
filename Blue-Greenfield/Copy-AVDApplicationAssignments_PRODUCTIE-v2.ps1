@@ -22,8 +22,8 @@ foreach ($Module in $RequiredModules) {
 Write-Host "`n=== AVD Application Assignment Copy Tool ===" -ForegroundColor Cyan
 Write-Host "Dit script kopieert applicatie-assignments tussen AVD Host Pools`n" -ForegroundColor White
 
-$SourceHostPool = Read-Host "Voer de naam in van de bron Host Pool (Productie)"
-$TargetHostPool = Read-Host "Voer de naam in van de doel Host Pool (Acceptatie)"
+$SourceHostPool = Read-Host "Voer de naam in van de bron Host Pool waar de assigments van gekopieerd moeten worden"
+$TargetHostPool = Read-Host "Voer de naam in van de doel Host Pool waar de assigments naartoe moeten"
 
 # Validatie van invoer
 if ([string]::IsNullOrWhiteSpace($SourceHostPool)) {
@@ -38,7 +38,7 @@ if ([string]::IsNullOrWhiteSpace($TargetHostPool)) {
 
 # Bevestiging van configuratie
 Write-Host "`n=== Configuratie Overzicht ===" -ForegroundColor Yellow
-Write-Host "Bron Host Pool (Productie): $SourceHostPool" -ForegroundColor Green
+Write-Host "Van welke Host Pool moeten de assigments gekopieerd worden: $SourceHostPool" -ForegroundColor Green
 Write-Host "Doel Host Pool (Acceptatie): $TargetHostPool" -ForegroundColor Green
 Write-Host "Applicaties: DIVERSE, EXACT-PROD, BEAUFORT, IBS`n" -ForegroundColor Green
 
