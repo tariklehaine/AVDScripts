@@ -5,7 +5,7 @@
 $subscriptionId = "2391ada8-feb5-4198-8876-abc31d30a5d5"
 $resourceGroupName = "DESKTOPS"
 $entraGroupObjectId = "41f295a7-0e00-4d2c-bbe0-084fd6aa2f66"
-$hostPoolName = "HP01"  # Static host pool name
+$hostPoolName = "HP04"  # Static host pool name
 
 # Import required modules (these should be pre-installed in Azure Automation)
 try {
@@ -21,7 +21,7 @@ try {
 # Connect to Azure using Managed Identity
 try {
     Write-Output "Connecting to Azure using Managed Identity..."
-    $AzureContext = (Connect-AzAccount -Identity).context
+    Connect-AzAccount -Identity
     Write-Output "Successfully connected to Azure with Managed Identity"
 } catch {
     Write-Error "Failed to connect to Azure with Managed Identity: $($_.Exception.Message)"

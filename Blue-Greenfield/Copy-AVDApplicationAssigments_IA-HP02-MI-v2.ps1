@@ -21,7 +21,7 @@ try {
 # Connect to Azure using Managed Identity
 try {
     Write-Output "Connecting to Azure using Managed Identity..."
-    $AzureContext = (Connect-AzAccount -Identity).context
+    Connect-AzAccount -Identity
     Write-Output "Successfully connected to Azure with Managed Identity"
 } catch {
     Write-Error "Failed to connect to Azure with Managed Identity: $($_.Exception.Message)"
