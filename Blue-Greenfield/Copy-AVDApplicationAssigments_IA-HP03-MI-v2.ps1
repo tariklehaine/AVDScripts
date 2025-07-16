@@ -5,7 +5,7 @@
 $subscriptionId = "2391ada8-feb5-4198-8876-abc31d30a5d5"
 $resourceGroupName = "DESKTOPS"
 $entraGroupObjectId = "41f295a7-0e00-4d2c-bbe0-084fd6aa2f66"
-$hostPoolName = "HP02"  # Static host pool name
+$hostPoolName = "HP03"  # Static host pool name
 
 # Import required modules (these should be pre-installed in Azure Automation)
 try {
