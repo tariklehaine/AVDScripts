@@ -19,11 +19,11 @@ foreach ($Module in $RequiredModules) {
 }
 
 # Statische configuratie
-$SourceHostPool = "HP04"
-$TargetHostPool = "HP03"
+$SourceHostPool = "HP01"
+$TargetHostPool = "HP02"
 $SubscriptionId = "2391ada8-feb5-4198-8876-abc31d30a5d5"
 $ResourceGroup = "Desktops"
-$AppNames = @("DIVERSE", "EXACT-PROD", "BEAUFORT", "IBS", "BEHEER05", "CLIENTELE-ITSM-2023", "CLIENTELE-ITSM-2023", "CLOUD-DRIVE-MAPPER", "MICROSOFT-EDGE", "OFFICE365", "ORTEC-PROD", "ORTEC-TEST", "PLANCARE-DOSSIER", "PLANCARE2", "RDP-APPS147", "RDP-APPS170", "RDP-APPS33", "RDP-APPS69", "RDP-AZ-BEHEER01", "RDP-BEAUFORT", "RDP-BEHEER07", "RDP-EXACT-SERVERS", "RDP-IBS-SERVERS", "RDP-ITSM", "RDP-OMADA", "RDP-ORTEC-SERVERS", "RDP-SQLC09", "RDP-SQLC10", "YOUFORCE-PROFESSIONAL")
+$AppNames = @("DIVERSE", "EXACT-PROD", "BEAUFORT", "IBS")
 
 # Authenticatie via Managed Identity
 try {
